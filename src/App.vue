@@ -1,17 +1,26 @@
 <template>
-  <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <contact-component></contact-component>
+<div class="container">
+  <app-header></app-header>
+  <hr>
+  <div class="row">
+    <app-user></app-user>
   </div>
+  <hr>
+  <app-footer></app-footer>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
+import User from "@/components/user/User";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    'app-header': Header,
+    'app-footer': Footer,
+    'app-user': User
   }
 }
 </script>
@@ -22,12 +31,12 @@ export default {
   margin: 0;
   padding: 0;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/*#app {*/
+/*  font-family: Avenir, Helvetica, Arial, sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*  text-align: center;*/
+/*  color: #2c3e50;*/
+/*  margin-top: 60px;*/
+/*}*/
 </style>
