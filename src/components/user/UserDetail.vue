@@ -2,8 +2,10 @@
 <div class="component">
    <h3>Infomation user detail</h3>
   <p>List Details</p>
-  <p>Name user form User component:   {{username}}</p>
+  <slot></slot>
+  <p>Name user form User component:   {{userName}}</p>
   <button @click="resetUser()"  class="btn btn-warning">Reset</button>
+<!--  <button @click="resetNameFn()" class="btn btn-warning">Reset Name Fn</button>-->
 </div>
 </template>
 
@@ -11,17 +13,12 @@
 export default {
   name: "UserDetail",
   props: {
-    username: {
-      type: Object,
-      default: function() {
-        return 'No name';
-      }
-    }
+    userName: String,
+    resetNameFn: Function
   },
-  methods: {
+  computed: {
     resetUser() {
-      this.username = 'No name';
-      this.$emit('outResetUsername', 'fdsfsdfs');
+     return  this.$emit('outResetUsername', 'Noname');
     }
   }
 }

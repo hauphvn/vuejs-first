@@ -11,7 +11,19 @@
 
 <script>
 export default {
-  name: "Server"
+  name: "Server",
+  created() {
+    console.log('Server created');
+  },
+  activated() {
+    console.log('Server activated');
+  },
+  deactivated() {
+    console.log('Server deactivated');
+  },
+  destroyed() {
+    console.log('Server destroyed');
+  }
 }
 </script>
 <style scoped>

@@ -4,6 +4,8 @@
       <div class="col-xs-12">
         <header>
           <h1>HEADER</h1>
+          <button @click="onChosenNav('app-user')" class="btn btn-outline-success">User</button>
+          <button @click="onChosenNav('app-server')"  class="btn btn-outline-success">Server</button>
         </header>
       </div>
     </div>
@@ -12,7 +14,12 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  methods: {
+    onChosenNav(nameNav) {
+      this.$emit('nameNavChosen', nameNav);
+    }
+  }
 }
 </script>
 

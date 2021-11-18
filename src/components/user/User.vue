@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xs-12 title">
         <p>User component</p>
-        <p>Current user:  {{this.username}}</p>
+        <p>Current user:  {{username}}</p>
         <button @click="onChooseUser('USER1')" type="button" class="btn btn-success">User 1</button>
         <button @click="onChooseUser('USER2')" type="button" class="btn btn-success">User 2</button>
         <button @click="onChooseUser('USER3')" type="button" class="btn btn-success">User 3</button>
@@ -13,8 +13,9 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <app-user-detail
-            @outResetUsername="username = $event"
-            :username=username>
+            @outResetUsername="onResetUserName($event)"
+            :user-name= username>
+          <p>I am a slot</p>
         </app-user-detail>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -35,12 +36,29 @@ export default {
     'app-user-edit': UserEdit
   },
   data: function()  {
-   return {username: 'NONAME'}
+   return {username: 'NO NAME'}
   },
   methods: {
     onChooseUser(newName) {
       this.username = newName;
+    },
+    onResetUserName(event) {
+      console.log('value: ', event);
+      this.username = 'NONAME';
+      return this.username;
     }
+  },
+  created() {
+    console.log('User created');
+  },
+  activated() {
+    console.log('User activated');
+  },
+  deactivated() {
+    console.log('User deactivated');
+  },
+  destroyed() {
+    console.log('User destroyed');
   }
 }
 </script>

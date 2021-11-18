@@ -1,9 +1,15 @@
 <template>
 <div class="container">
-  <app-header></app-header>
+  <app-header
+      @nameNavChosen="onHandleNav($event)"
+  ></app-header>
+  <p>{{componentName}}</p>
   <hr>
   <div class="row">
-    <app-user></app-user>
+<keep-alive>
+  <component :is="componentName"></component>
+</keep-alive>
+<!--    <app-user></app-user>-->
   </div>
   <hr>
   <app-footer></app-footer>
@@ -14,14 +20,25 @@
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import User from "@/components/user/User";
+import Server from "@/components/servers/Server";
 
 export default {
   name: 'App',
   components: {
     'app-header': Header,
     'app-footer': Footer,
-    'app-user': User
+    'app-user': User,
+    appServer: Server
+  },
+  data: function() {
+    return {componentName: 'app-user'};
+  },
+  methods: {
+    onHandleNav(nameNav) {
+      this.componentName = nameNav;
+    }
   }
+
 }
 </script>
 
