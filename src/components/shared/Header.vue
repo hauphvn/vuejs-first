@@ -4,9 +4,17 @@
       <div class="col-xs-12">
         <header>
           <h1>HEADER</h1>
-          <button @click="onChosenNav('app-user')" class="btn btn-outline-success">User</button>
+          <router-link
+              tag="button"
+              class="btn btn-outline-success"
+              to="/form"
+          >Form</router-link>
+          <router-link
+              tag="button"
+              class="btn btn-outline-success"
+              to="/"
+          >User</router-link>
           <button @click="onChosenNav('app-server')"  class="btn btn-outline-success">Server</button>
-          <button @click="onChosenNav('app-user-form')"  class="btn btn-outline-success">Form</button>
           <button @click="onChosenNav('app-directive-home')" class="btn btn-outline-success">Directive</button>
           <button @click="onChosenNav('app-filter')" class="btn btn-outline-success">Filter</button>
         </header>

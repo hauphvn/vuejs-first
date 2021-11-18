@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import VueRouter from 'vue-router';
+import {routes} from './router';
 Vue.config.productionTip = false;
-Vue.config.globalProperties.$filter = {
-
-}
+Vue.use(VueRouter);
+const router = new VueRouter({  mode: 'history', routes});
 Vue.directive('tee-custom',{
   bind(el, binding){
     let delay = 0;
@@ -21,5 +21,6 @@ Vue.directive('tee-custom',{
   }
 });
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
