@@ -43,22 +43,22 @@ export default {
       this.username = newName;
     },
     onResetUserName(event) {
-      console.log('value: ', event);
-      this.username = 'NONAME';
+      //*.log('value: ', event);
+      this.username = event;
       return this.username;
     }
   },
   created() {
-    console.log('User created');
+    //*.log('User created');
   },
   activated() {
-    console.log('User activated');
+    //*.log('User activated');
   },
   deactivated() {
-    console.log('User deactivated');
+    //*.log('User deactivated');
   },
   destroyed() {
-    console.log('User destroyed');
+    //*.log('User destroyed');
   }
 }
 </script>

@@ -5,7 +5,7 @@
   ></app-header>
   <p>{{componentName}}</p>
   <hr>
-  <div class="row">
+  <div class="row content">
 <keep-alive>
   <component :is="componentName"></component>
 </keep-alive>
@@ -21,6 +21,8 @@ import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import User from "@/components/user/User";
 import Server from "@/components/servers/Server";
+import UserForm from "@/components/form/UserForm";
+import DirectiveHome from "@/components/directive/DirectiveHome";
 
 export default {
   name: 'App',
@@ -28,7 +30,9 @@ export default {
     'app-header': Header,
     'app-footer': Footer,
     'app-user': User,
-    appServer: Server
+    appServer: Server,
+    appUserForm: UserForm,
+    appDirectiveHome: DirectiveHome
   },
   data: function() {
     return {componentName: 'app-user'};
@@ -47,6 +51,10 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.content{
+  display: inline-block;
+  width: 100%;
 }
 /*#app {*/
 /*  font-family: Avenir, Helvetica, Arial, sans-serif;*/

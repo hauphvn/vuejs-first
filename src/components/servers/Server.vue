@@ -13,16 +13,16 @@
 export default {
   name: "Server",
   created() {
-    console.log('Server created');
+    //*.log('Server created');
   },
   activated() {
-    console.log('Server activated');
+    //*.log('Server activated');
   },
   deactivated() {
-    console.log('Server deactivated');
+    //*.log('Server deactivated');
   },
   destroyed() {
-    console.log('Server destroyed');
+    //*.log('Server destroyed');
   }
 }
 </script>
