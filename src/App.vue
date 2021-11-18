@@ -23,6 +23,7 @@ import User from "@/components/user/User";
 import Server from "@/components/servers/Server";
 import UserForm from "@/components/form/UserForm";
 import DirectiveHome from "@/components/directive/DirectiveHome";
+import Filter from "@/components/filter/Filter";
 
 export default {
   name: 'App',
@@ -32,7 +33,8 @@ export default {
     'app-user': User,
     appServer: Server,
     appUserForm: UserForm,
-    appDirectiveHome: DirectiveHome
+    appDirectiveHome: DirectiveHome,
+    'app-filter': Filter
   },
   data: function() {
     return {componentName: 'app-user'};

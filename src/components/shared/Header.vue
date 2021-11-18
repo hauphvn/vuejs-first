@@ -8,6 +8,7 @@
           <button @click="onChosenNav('app-server')"  class="btn btn-outline-success">Server</button>
           <button @click="onChosenNav('app-user-form')"  class="btn btn-outline-success">Form</button>
           <button @click="onChosenNav('app-directive-home')" class="btn btn-outline-success">Directive</button>
+          <button @click="onChosenNav('app-filter')" class="btn btn-outline-success">Filter</button>
         </header>
       </div>
     </div>
