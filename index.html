@@ -7,7 +7,31 @@
 </head>
 <body>
 <div id="app" v-cloak>
-  <p>{{firstName}}</p>
+    <p>{{fullName}}</p>
+    <a :href="url" target="_blank">Google</a>
+    <p>{{email}}</p>
+    <p>{{username}}</p>
+    <hr>
+    <label for="username">Username</label>
+    <input
+            id="username"
+            type="text"
+            @keyup.enter="onChangeUsername($event)">
+    <label for="email">Email</label>
+    <input
+            id="email"
+            type="text"
+            :value="email"
+            @input="onChangeEmail($event)">
+    <hr>
+    <label>
+        <input type="checkbox" v-model="isRed" /> Red
+    </label>
+    <select v-model="selectedTextColor">
+        <option value="text-color-black">Black</option>
+        <option value="text-color-green">Green</option>
+    </select>
+    <div class="circle" :class="[class_circle_red, onSelectedTextColor]"></div>
 </div>
 <script src="https://unpkg.com/vue@next"></script>
 <script src="app.js"></script>
