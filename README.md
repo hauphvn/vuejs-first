@@ -1,24 +1,59 @@
-# vuejs-first
+## VueJS 
+### Basic 
 
-## Project setup
-```
-npm install
-```
+- Vue instance is a proxy object
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+- Slow network: ``v-cloak``
+```html
+<div id="app" v-cloak>
+  <p>{{firstName}}</p>
+</div>
 ```
 
-### Lints and fixes files
-```
-npm run lint
+```css
+[v-cloak] {
+    display: none;
+}
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---
+
+
+
+[comment]: <> (# vuejs-first)
+
+[comment]: <> (## Project setup)
+
+[comment]: <> (```)
+
+[comment]: <> (npm install)
+
+[comment]: <> (```)
+
+[comment]: <> (### Compiles and hot-reloads for development)
+
+[comment]: <> (```)
+
+[comment]: <> (npm run serve)
+
+[comment]: <> (```)
+
+[comment]: <> (### Compiles and minifies for production)
+
+[comment]: <> (```)
+
+[comment]: <> (npm run build)
+
+[comment]: <> (```)
+
+[comment]: <> (### Lints and fixes files)
+
+[comment]: <> (```)
+
+[comment]: <> (npm run lint)
+
+[comment]: <> (```)
+
+[comment]: <> (### Customize configuration)
+
+[comment]: <> (See [Configuration Reference]&#40;https://cli.vuejs.org/config/&#41;.)
